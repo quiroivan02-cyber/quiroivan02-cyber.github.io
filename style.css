@@ -212,24 +212,25 @@ body {
 
 /* Alternating section backgrounds */
 #sobre-mi {
-    background: white;
+    background: #FFE5E5;  /* Rosa pastel */
 }
 
 #credenciales {
-    background: var(--background-gray);
+    background: #FFF4E0;  /* Amarillo pastel */
 }
 
 #proyectos {
-    background: white;
+    background: #E0F4FF;  /* Azul pastel */
 }
 
 #skills {
-    background: var(--background-gray);
+    background: #E5FFE5;  /* Verde pastel */
 }
 
 #contacto {
-    background: white;
+    background: #F0E5FF;  /* Morado pastel */
 }
+
 
 /* About */
 .about-content {
