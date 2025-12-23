@@ -212,24 +212,25 @@ body {
 
 /* Alternating section backgrounds */
 #sobre-mi {
-    background: #FFE5E5;  /* Rosa pastel */
+    background: #f8f7ff;  /* Morado clarísimo */
 }
 
 #credenciales {
-    background: #FFF4E0;  /* Amarillo pastel */
+    background: linear-gradient(135deg, #e0d9ff 0%, #f5f2ff 100%);
 }
 
 #proyectos {
-    background: #E0F4FF;  /* Azul pastel */
+    background: #ffffff;  /* Blanco */
 }
 
 #skills {
-    background: #E5FFE5;  /* Verde pastel */
+    background: linear-gradient(135deg, #d4c5f9 0%, #e8ddff 100%);
 }
 
 #contacto {
-    background: #F0E5FF;  /* Morado pastel */
+    background: #f3efff;  /* Morado claro */
 }
+
 
 
 /* About */
