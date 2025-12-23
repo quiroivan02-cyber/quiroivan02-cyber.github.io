@@ -175,13 +175,14 @@ body {
 }
 
 .btn-primary {
-    background: white;
-    color: var(--primary-color);
+    background: var(--primary-color);  /* Fondo morado */
+    color: white;  /* Texto blanco */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background: var(--secondary-color);  /* Más oscuro al hover */
 }
 
 .btn-secondary {
@@ -194,6 +195,7 @@ body {
     background: white;
     color: var(--primary-color);
 }
+
 
 /* Sections */
 .section {
