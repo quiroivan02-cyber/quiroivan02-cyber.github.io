@@ -237,22 +237,26 @@ body {
 
 
 /* About */
+/* About Section - Texto más bold */
 .about-content {
     max-width: 800px;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 1.15rem;  /* Un poco más grande */
     line-height: 1.8;
-    color: var(--text-light);
+    color: #1f2937;  /* Color más oscuro */
+    font-weight: 600;  /* Semi-bold - MÁS NEGRILLA */
 }
 
 .about-content p {
     margin-bottom: var(--spacing-md);
+    font-weight: 600;  /* Semi-bold */
 }
 
 .about-content strong {
-    color: var(--primary-color);
-    font-weight: 600;
+    color: #6b21a8;  /* Morado oscuro que resalte */
+    font-weight: 800;  /* Extra bold */
 }
+
 
 /* Credentials */
 .credentials-grid {
