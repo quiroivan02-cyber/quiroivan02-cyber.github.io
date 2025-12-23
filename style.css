@@ -212,19 +212,20 @@ body {
 
 /* Alternating section backgrounds */
 #sobre-mi {
-    background: linear-gradient(135deg, #FFB3BA 0%, #FF9AA2 100%);
-}
+    background: linear-gradient(135deg, #BAE1FF 0%, #C7CEEA 100%);   
 
 #credenciales {
+     background: linear-gradient(135deg, #BAFFC9 0%, #B5EAD7 100%);   
+}
+    
+#proyectos {
     background: linear-gradient(135deg, #FFDFBA 0%, #FFDAC1 100%);
 }
 
-#proyectos {
-    background: linear-gradient(135deg, #BAFFC9 0%, #B5EAD7 100%);
-}
-
 #skills {
-    background: linear-gradient(135deg, #BAE1FF 0%, #C7CEEA 100%);
+     background: linear-gradient(135deg, #FFB3BA 0%, #FF9AA2 100%);
+}
+    
 }
 
 #contacto {
