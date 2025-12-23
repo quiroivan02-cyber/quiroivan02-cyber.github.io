@@ -114,6 +114,23 @@ body {
     margin: 0 auto;
 }
 
+.hero-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 0.8s ease;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .hero-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
@@ -181,16 +198,33 @@ body {
     padding: var(--spacing-xl) 0;
 }
 
-.section-gray {
-    background: var(--background-gray);
-}
-
 .section-title {
     font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 700;
     text-align: center;
     margin-bottom: var(--spacing-lg);
     color: var(--text-dark);
+}
+
+/* Alternating section backgrounds */
+#sobre-mi {
+    background: white;
+}
+
+#credenciales {
+    background: var(--background-gray);
+}
+
+#proyectos {
+    background: white;
+}
+
+#skills {
+    background: var(--background-gray);
+}
+
+#contacto {
+    background: white;
 }
 
 /* About */
@@ -283,7 +317,7 @@ body {
 
 .project-video {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     background: var(--background-gray);
@@ -371,23 +405,89 @@ body {
 }
 
 .skill-category li {
-    padding
-/* Hero Image */
-.hero-image {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto var(--spacing-md);
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: fadeInScale 0.8s ease;
+    padding: var(--spacing-xs) 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.skill-category li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Contact */
+.contact-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.contact-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+}
+
+.contact-card p {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    background: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInScale {
@@ -401,32 +501,41 @@ body {
     }
 }
 
-/* Alternating section backgrounds */
-.section:nth-of-type(even) {
-    background: var(--background-gray);
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--box-shadow-lg);
+        padding: var(--spacing-md) 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .credentials-grid,
+    .skills-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.section:nth-of-type(odd) {
-    background: white;
-}
-
-/* Override specific sections if needed */
-#sobre-mi {
-    background: white;
-}
-
-#credenciales {
-    background: var(--background-gray);
-}
-
-#proyectos {
-    background: white;
-}
-
-#skills {
-    background: var(--background-gray);
-}
-
-#contacto {
-    background: white;
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
