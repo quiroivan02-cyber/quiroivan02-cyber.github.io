@@ -130,7 +130,9 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
+    transform: scale(0.5);
 }
+
 
 .hero-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
