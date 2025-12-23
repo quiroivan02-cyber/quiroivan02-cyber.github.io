@@ -372,3 +372,61 @@ body {
 
 .skill-category li {
     padding
+/* Hero Image */
+.hero-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 0.8s ease;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Alternating section backgrounds */
+.section:nth-of-type(even) {
+    background: var(--background-gray);
+}
+
+.section:nth-of-type(odd) {
+    background: white;
+}
+
+/* Override specific sections if needed */
+#sobre-mi {
+    background: white;
+}
+
+#credenciales {
+    background: var(--background-gray);
+}
+
+#proyectos {
+    background: white;
+}
+
+#skills {
+    background: var(--background-gray);
+}
+
+#contacto {
+    background: white;
+}
