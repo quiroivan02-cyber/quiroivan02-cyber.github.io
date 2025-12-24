@@ -221,7 +221,7 @@ body {
 
 /* Alternating section backgrounds */
 #sobre-mi {
-    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 50%, #a5b4fc 100%);
+ background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
 }
 
 /* Credenciales y Habilidades con estilo del hero */
@@ -231,9 +231,8 @@ body {
 }
 
 #proyectos {
-    background: linear-gradient(135deg, #d1fae5 0%, #6ee7b7 40%, #22c55e 100%);
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
 }
-
 #skills {
     background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
     color: white;
