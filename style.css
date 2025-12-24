@@ -546,10 +546,50 @@ body {
         display: flex;
     }
 
+    /* Hero responsive */
     .hero {
         padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: auto;          /* Que no fuerce altura completa */
     }
 
+    .hero-content {
+        flex-direction: column;    /* Foto arriba, texto abajo */
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .hero-title,
+    .hero-subtitle,
+    .hero-description,
+    .hero-buttons {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 7vw, 2.6rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    /* Grids a una columna */
     .credentials-grid,
     .skills-grid,
     .contact-grid {
@@ -561,5 +601,6 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 
 /* Updated 12:48 AM */
