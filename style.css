@@ -221,25 +221,27 @@ body {
 
 /* Alternating section backgrounds */
 #sobre-mi {
-    background: linear-gradient(135deg, #BAE1FF 0%, #C7CEEA 100%); 
+    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 50%, #a5b4fc 100%);
 }
 
+/* Credenciales y Habilidades con estilo del hero */
 #credenciales {
-     background: linear-gradient(135deg, #BAFFC9 0%, #B5EAD7 100%);   
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
-    
+
 #proyectos {
-    background: linear-gradient(135deg, #FFDFBA 0%, #FFDAC1 100%);
+    background: linear-gradient(135deg, #d1fae5 0%, #6ee7b7 40%, #22c55e 100%);
 }
 
 #skills {
-     background: linear-gradient(135deg, #FFB3BA 0%, #FF9AA2 100%);
+    background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
+    color: white;
 }
     
 
-
 #contacto {
-    background: linear-gradient(135deg, #DCC9FF 0%, #E2B0FF 100%);
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
 }
 
 
