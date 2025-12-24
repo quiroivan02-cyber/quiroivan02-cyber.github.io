@@ -318,6 +318,28 @@ body {
     color: var(--text-light);
     font-size: 0.9rem;
 }
+.credential-logo-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: var(--spacing-sm);
+    cursor: pointer;
+}
+
+.credential-logo-btn img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credential-logo-btn:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Projects */
 .projects-grid {
