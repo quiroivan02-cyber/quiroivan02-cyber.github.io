@@ -99,3 +99,30 @@ cards.forEach((card, index) => {
 // Console message
 console.log('%c👋 Hola! Gracias por revisar mi portafolio', 'color: #2563eb; font-size: 16px; font-weight: bold;');
 console.log('%c📧 Contacto: isquiroga@utp.edu.co', 'color: #6b7280; font-size: 14px;');
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.credential-logo-btn');
+  const modal = document.getElementById('diplomaModal');
+  const modalImg = document.getElementById('diplomaImage');
+  const closeBtn = document.getElementById('diplomaClose');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const diplomaSrc = btn.getAttribute('data-diploma');
+      modalImg.src = `assets/${diplomaSrc}`;
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
+  });
+});
+
