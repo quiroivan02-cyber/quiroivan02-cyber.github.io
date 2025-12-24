@@ -100,19 +100,23 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding: 100px 0 60px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
+/* Ahora hero-content será un layout de 2 columnas */
 .hero-content {
-    text-align: center;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;              /* separación entre foto y texto */
 }
+
 
 .hero-image {
     width: 180px;
