@@ -354,6 +354,8 @@ body {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -364,11 +366,9 @@ body {
 .project-video {
     position: relative;
     width: 100%;
-    max-width: 480px;  /* Limita el ancho máximo */
-    margin: 0 auto;
     padding-bottom: 56.25%; /* Mantiene proporción 16:9 */
     overflow: hidden;
-    border-radius: 8px;
+    background: #000;
 }
 
 .project-video iframe {
@@ -377,8 +377,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
-
 
 .project-content {
     padding: var(--spacing-md);
@@ -425,6 +425,7 @@ body {
 .project-link:hover {
     gap: 0.5rem;
 }
+
 
 /* Skills */
 .skills-grid {
