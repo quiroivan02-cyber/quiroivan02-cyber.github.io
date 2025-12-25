@@ -366,9 +366,12 @@ body {
 .project-video {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Mantiene proporción 16:9 */
+    max-width: 600px;  /* Limita el ancho del video */
+    margin: var(--spacing-md) auto;  /* Margen arriba/abajo y centrado */
+    padding-bottom: 33.75%; /* Altura más pequeña (proporción 16:9 ajustada) */
     overflow: hidden;
     background: #000;
+    border-radius: 8px;
 }
 
 .project-video iframe {
@@ -381,7 +384,7 @@ body {
 }
 
 .project-content {
-    padding: var(--spacing-md);
+    padding: 0 var(--spacing-md) var(--spacing-md);
 }
 
 .project-content h3 {
@@ -392,8 +395,17 @@ body {
 
 .project-content p {
     color: var(--text-light);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
 }
 
 .project-tags {
@@ -425,6 +437,7 @@ body {
 .project-link:hover {
     gap: 0.5rem;
 }
+
 .project-subtitle {
     font-size: 1rem;
     color: var(--text-dark);
