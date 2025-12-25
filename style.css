@@ -664,4 +664,70 @@ html {
     cursor: pointer;
 }
 
-/* Updated 12:48 AM */
+/* Mejoras para proyectos */
+.project-subtitle {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem;
+    font-weight: 600;
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.project-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+}
+
+.project-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.project-access {
+    background: var(--background-gray);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.project-access code {
+    background: rgba(37, 99, 235, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.project-link.secondary {
+    background: var(--background-gray);
+    color: var(--text-dark);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.project-link.secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
