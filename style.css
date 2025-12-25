@@ -354,8 +354,6 @@ body {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
 }
 
 .project-card:hover {
@@ -366,12 +364,9 @@ body {
 .project-video {
     position: relative;
     width: 100%;
-    max-width: 600px;  /* Limita el ancho del video */
-    margin: var(--spacing-md) auto;  /* Margen arriba/abajo y centrado */
-    padding-bottom: 33.75%; /* Altura más pequeña (proporción 16:9 ajustada) */
+    padding-bottom: 56.25%; /* Mantiene proporción 16:9 */
     overflow: hidden;
     background: #000;
-    border-radius: 8px;
 }
 
 .project-video iframe {
@@ -384,7 +379,7 @@ body {
 }
 
 .project-content {
-    padding: 0 var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-md);
 }
 
 .project-content h3 {
@@ -395,9 +390,8 @@ body {
 
 .project-content p {
     color: var(--text-light);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     line-height: 1.6;
-    font-size: 0.95rem;
 }
 
 .project-subtitle {
@@ -437,6 +431,7 @@ body {
 .project-link:hover {
     gap: 0.5rem;
 }
+
 
 .project-subtitle {
     font-size: 1rem;
