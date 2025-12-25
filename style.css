@@ -363,10 +363,12 @@ body {
 
 .project-video {
     position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
+    width: 100%;
+    max-width: 480px;  /* Limita el ancho máximo */
+    margin: 0 auto;
+    padding-bottom: 56.25%; /* Mantiene proporción 16:9 */
     overflow: hidden;
-    background: var(--background-gray);
+    border-radius: 8px;
 }
 
 .project-video iframe {
@@ -376,6 +378,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 
 .project-content {
     padding: var(--spacing-md);
