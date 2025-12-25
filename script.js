@@ -46,13 +46,13 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links - MEJORADO
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const headerOffset = 80;
+            const headerOffset = 100; // Ajusta este valor según el alto de tu header
             const elementPosition = target.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
