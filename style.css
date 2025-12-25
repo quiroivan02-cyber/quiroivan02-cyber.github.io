@@ -425,6 +425,14 @@ body {
 .project-link:hover {
     gap: 0.5rem;
 }
+.project-subtitle {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
 
 
 /* Skills */
