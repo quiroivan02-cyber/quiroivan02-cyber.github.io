@@ -918,4 +918,17 @@ html {
     background: var(--primary-color);
     color: white;
 }
+/* Ajuste de scroll para header fijo */
+section[id] {
+    scroll-margin-top: 100px; /* Ajusta según el alto de tu header */
+}
+
+/* O de manera más específica */
+#sobre-mi,
+#credenciales,
+#proyectos,
+#skills,
+#contacto {
+    scroll-margin-top: 100px;
+}
 
