@@ -308,44 +308,57 @@ body {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
 }
 
-/* === SOLO para página credenciales.html === */
-/* Credenciales y Skills COMPLETAMENTE UNIFICADOS */
+/* === UNIFICACIÓN COMPLETA - Sin separación visible === */
 #credenciales,
 #skills {
     background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
     color: white;
+    margin: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Skills - Primera sección (arriba) */
 #skills {
     padding-top: 4rem;      
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /* Credenciales - Segunda sección (abajo) */
 #credenciales {
-    padding-top: 0;
+    padding-top: 0 !important;
     padding-bottom: 4rem;   
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 
-/* Títulos ajustados */
-#credenciales .section-title {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+/* Eliminar espacios entre los contenedores */
+#skills .container {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
+#credenciales .container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Títulos con espacio visual pero sin crear gap */
 #skills .section-title {
     margin-bottom: 3rem;
+    padding-top: 0;
 }
 
-/* Container sin padding extra lateral */
-#skills .container,
-#credenciales .container {
-    max-width: 1200px;
+#credenciales .section-title {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
 }
 
+/* Ajustar grid de skills para eliminar espacio inferior */
+#skills .skills-grid {
+    margin-bottom: 0;
+}
 
 
 /* === About Section (Sobre Mí) === */
