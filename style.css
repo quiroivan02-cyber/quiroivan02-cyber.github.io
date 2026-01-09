@@ -308,7 +308,7 @@ body {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
 }
 
-/* === Credenciales y Skills UNIFICADOS === */
+/* === Credenciales y Skills COMPLETAMENTE UNIFICADOS === */
 #credenciales,
 #skills {
     background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
@@ -317,15 +317,28 @@ body {
 
 /* Skills - Primera sección (arriba) */
 #skills {
-    padding-top: 6rem;      /* Espaciado normal arriba */
-    padding-bottom: 2rem;   /* Poco espacio abajo */
+    padding-top: 6rem;      
+    padding-bottom: 0;      /* ← SIN espacio abajo */
+    margin-bottom: 0;       /* ← SIN margen abajo */
 }
 
 /* Credenciales - Segunda sección (abajo) */
 #credenciales {
-    padding-top: 2rem;      /* Poco espacio arriba - Continúa desde skills */
-    padding-bottom: 6rem;   /* Espaciado normal abajo */
+    padding-top: 0;         /* ← SIN espacio arriba */
+    margin-top: 0;          /* ← SIN margen arriba */
+    padding-bottom: 6rem;   
 }
+
+/* Títulos de sección ajustados para unificación */
+#credenciales .section-title {
+    margin-top: 4rem;       /* Espacio visual entre contenidos */
+    margin-bottom: 4rem;
+}
+
+#skills .section-title {
+    margin-bottom: 4rem;
+}
+
 
 
 /* === About Section (Sobre Mí) === */
