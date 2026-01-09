@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Habilidades Y Credenciales  | Iván Santiago Quiroga</title>
+  <title>Habilidades Y Credenciales | Iván Santiago Quiroga</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <header class="header">
@@ -17,7 +20,7 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="credenciales.html" class="active">Habilidades y Credenciales </a></li>
+          <li><a href="credenciales.html" class="active">Habilidades y Credenciales</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -30,8 +33,53 @@
 
   <main style="padding-top:100px;">
 
-    <!-- Credenciales -->
-    <section class="section" id="credenciales">
+    <!-- Habilidades Técnicas PRIMERO -->
+    <section class="section section-unified" id="skills">
+      <div class="container">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Lenguajes</h3>
+            <ul>
+              <li>JavaScript / Node.js</li>
+              <li>Python</li>
+              <li>Google Apps Script</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Herramientas & Frameworks</h3>
+            <ul>
+              <li>n8n (Automatización)</li>
+              <li>AppSheet</li>
+              <li>Google Workspace</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Bases de Datos & Análisis</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>Google Sheets</li>
+              <li>Excel Avanzado</li>
+              <li>SAP</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Áreas de Expertise</h3>
+            <ul>
+              <li>Automatización de Procesos</li>
+              <li>IA Aplicada</li>
+              <li>Análisis de Datos</li>
+              <li>Gestión de Inventarios</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credenciales DESPUÉS -->
+    <section class="section section-unified" id="credenciales">
       <div class="container">
         <h2 class="section-title">Formación y Certificaciones</h2>
         <div class="credentials-grid">
@@ -76,51 +124,6 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="section" id="skills">
-      <div class="container">
-        <h2 class="section-title">Habilidades Técnicas</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Lenguajes</h3>
-            <ul>
-              <li>JavaScript / Node.js</li>
-              <li>Python</li>
-              <li>Google Apps Script</li>
-              <li>HTML / CSS</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Herramientas & Frameworks</h3>
-            <ul>
-              <li>n8n (Automatización)</li>
-              <li>AppSheet</li>
-              <li>Google Workspace</li>
-              <li>Git / GitHub</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Bases de Datos & Análisis</h3>
-            <ul>
-              <li>MySQL</li>
-              <li>Google Sheets</li>
-              <li>Excel Avanzado</li>
-              <li>SAP</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Áreas de Expertise</h3>
-            <ul>
-              <li>Automatización de Procesos</li>
-              <li>IA Aplicada</li>
-              <li>Análisis de Datos</li>
-              <li>Gestión de Inventarios</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- Modal Diploma -->
@@ -131,28 +134,25 @@
     </div>
   </div>
 
-<footer class="footer">
-  <div class="footer-contact">
-    <!-- WhatsApp con emojis -->
-    <a href="https://wa.me/573197686417?text=%F0%9F%91%8B%20Hola%20Iv%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" class="footer-contact-link" target="_blank">
-  <i class="fa-brands fa-whatsapp footer-icon"></i>
-  +57 319 768 6417
-</a>
-
-    
-    <!-- Gmail con emojis -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=isquiroga@utp.edu.co&su=Contacto%20desde%20tu%20portafolio&body=%F0%9F%91%8B%20Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" target="_blank" class="footer-contact-link">
-      <i class="fa-solid fa-envelope footer-icon"></i>
-      isquiroga@utp.edu.co
-    </a>
-  </div>
-  <div class="footer-copyright">
-    © 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.
-  </div>
-</footer>
-
+  <footer class="footer">
+    <div class="footer-contact">
+      <!-- WhatsApp con emojis -->
+      <a href="https://wa.me/573197686417?text=%F0%9F%91%8B%20Hola%20Iv%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" class="footer-contact-link" target="_blank">
+        <i class="fa-brands fa-whatsapp footer-icon"></i>
+        +57 319 768 6417
+      </a>
+      
+      <!-- Gmail con emojis -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=isquiroga@utp.edu.co&su=Contacto%20desde%20tu%20portafolio&body=%F0%9F%91%8B%20Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" target="_blank" class="footer-contact-link">
+        <i class="fa-solid fa-envelope footer-icon"></i>
+        isquiroga@utp.edu.co
+      </a>
+    </div>
+    <div class="footer-copyright">
+      © 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
