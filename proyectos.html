@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Iván Santiago Quiroga</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo"><a href="index.html">ISQ</a></div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="credenciales.html">Credenciales y Habilidades</a></li>
+          <li><a href="proyectos.html" class="active">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top:100px;">
+    <section class="section" id="proyectos">
+      <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="projects-grid">
+
+          <!-- Proyecto 1 - Tienda PlayStation -->
+          <div class="project-card">
+            <div class="project-video">
+              <iframe src="https://www.youtube.com/embed/TtT3LnV8BFA"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+              </iframe>
+            </div>
+            <div class="project-content">
+              <h3>🎮 Tienda PlayStation E-Commerce</h3>
+              <p>Sistema completo de e-commerce con catálogo de productos, gestión de inventario, carrito de compras y panel administrativo. Incluye sistema de autenticación y dashboard de métricas de ventas.</p>
+
+              <h4 class="project-subtitle">💡 Características principales</h4>
+              <ul class="project-features">
+                <li>Catálogo dinámico con búsqueda y filtros</li>
+                <li>Carrito de compras en tiempo real</li>
+                <li>Panel administrativo completo</li>
+                <li>Gestión de inventario automatizada</li>
+                <li>Integración con IA para recomendaciones</li>
+              </ul>
+
+              <p class="project-access"><strong>Acceso admin:</strong> Usuario: <code>Santiago</code> | Contraseña: <code>santi123</code></p>
+
+              <h4 class="project-subtitle">🛠️ Herramientas Utilizadas</h4>
+              <div class="project-tags">
+                <span class="tag">Google Apps Script</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Google Sheets API</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">API Gemini</span>
+                <span class="tag">API Groq</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://script.google.com/macros/s/AKfycbwP8zTzYqaJ0MJveMxmC3MgWE6Tt0jdsZ3CfaWbbK7dgg8QqLx7B9pBUxaCCSGiOWaQ/exec"
+                   target="_blank" class="project-link">Ver demo en vivo →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 - Implementación IA + Bot WhatsApp -->
+          <div class="project-card">
+            <div class="project-video">
+              <iframe src="https://www.youtube.com/embed/udNU2k-vvOw"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+              </iframe>
+            </div>
+            <div class="project-content">
+              <h3>💬 Bot WhatsApp con IA</h3>
+              <p>Sistema de automatización para atención al cliente 24/7 con inteligencia artificial. Permite checkout de productos, consultas de inventario, seguimiento de pedidos y respuestas contextuales usando procesamiento de lenguaje natural.</p>
+
+              <h4 class="project-subtitle">💡 Características principales</h4>
+              <ul class="project-features">
+                <li>Atención automatizada con IA conversacional</li>
+                <li>Procesamiento de pedidos y pagos</li>
+                <li>Consultas de inventario en tiempo real</li>
+                <li>Generación de cotizaciones PDF</li>
+                <li>Integración con n8n para workflows</li>
+              </ul>
+
+              <h4 class="project-subtitle">🛠️ Herramientas Utilizadas</h4>
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">BuilderBot</span>
+                <span class="tag">Baileys</span>
+                <span class="tag">n8n</span>
+                <span class="tag">OpenAI API</span>
+                <span class="tag">Google Sheets</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 - Gestión de Incidentes -->
+          <div class="project-card">
+            <div class="project-video">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+              </iframe>
+            </div>
+            <div class="project-content">
+              <h3>📋 Sistema de Gestión de Incidentes</h3>
+              <p>Aplicación web para documentar y gestionar incidentes de tránsito. Permite captura de fotos, geolocalización, generación automática de reportes PDF y almacenamiento en la nube con trazabilidad completa.</p>
+
+              <h4 class="project-subtitle">💡 Características principales</h4>
+              <ul class="project-features">
+                <li>Formulario web responsive con validación</li>
+                <li>Carga de múltiples fotos desde móvil</li>
+                <li>Generación automática de PDFs con logo</li>
+                <li>Almacenamiento en Google Drive organizado</li>
+                <li>Sistema de códigos QR para seguimiento</li>
+              </ul>
+
+              <h4 class="project-subtitle">🛠️ Herramientas Utilizadas</h4>
+              <div class="project-tags">
+                <span class="tag">Google Apps Script</span>
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Google Drive API</span>
+                <span class="tag">PDF Generation</span>
+                <span class="tag">QR Codes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 4 - Dashboard de Ventas -->
+          <div class="project-card">
+            <div class="project-video">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+              </iframe>
+            </div>
+            <div class="project-content">
+              <h3>📊 Dashboard Interactivo de Análisis</h3>
+              <p>Panel de control con visualizaciones en tiempo real para análisis de ventas de videojuegos. Incluye métricas de rendimiento, gráficos interactivos, segmentación por categorías y reportes automatizados.</p>
+
+              <h4 class="project-subtitle">💡 Características principales</h4>
+              <ul class="project-features">
+                <li>Visualizaciones interactivas con Charts API</li>
+                <li>Métricas de ventas en tiempo real</li>
+                <li>Análisis por categorías y tendencias</li>
+                <li>Exportación de reportes personalizados</li>
+                <li>Actualización automática de datos</li>
+              </ul>
+
+              <h4 class="project-subtitle">🛠️ Herramientas Utilizadas</h4>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Google Apps Script</span>
+                <span class="tag">Google Charts API</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Google Sheets</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
