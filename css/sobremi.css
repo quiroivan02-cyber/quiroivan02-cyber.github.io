@@ -1,1 +1,25 @@
+/* =========================================
+   SOBREMI.CSS - Página Sobre Mí
+   ========================================= */
 
+#sobre-mi {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    padding-top: 100px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.about-content p {
+    margin-bottom: 2rem;
+}
+
+.about-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
