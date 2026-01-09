@@ -2,9 +2,23 @@
    CONTACTO.CSS - Página de Contacto
    ========================================= */
 
+/* Fondo completo naranja/rojo - sin blanco */
+html,
+body {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    min-height: 100vh;
+}
+
+/* Asegurar que el main también tenga el gradiente */
+main {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    min-height: 100vh;
+}
+
 #contacto {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
     padding-top: 100px;
+    min-height: 100vh; /* ← Asegura altura completa */
 }
 
 .contact-content {
