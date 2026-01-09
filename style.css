@@ -1,7 +1,18 @@
+/* ===========================================
+   PORTFOLIO CSS - ÍNDICE DE CONTENIDOS
+   ===========================================
+   1. Reset & Base Styles
+   2. CSS Variables
+   3. Typography & Base Elements
+   4. Layout Components
+   5. Hero Section
+   6. Content Sections
+   7. UI Components
+   8. Animations
+   9. Media Queries & Responsive Design
+   =========================================== */
 
-
-
-
+/* ===========================================
    1. RESET & BASE STYLES
    =========================================== */
 * {
@@ -33,30 +44,30 @@ section[id] {
    =========================================== */
 :root {
     /* === Brand Colors === */
-    --primary-color: #2563eb;      /* Azul principal - CTAs y elementos destacados */
-    --secondary-color: #1e40af;    /* Azul oscuro - Hover states */
-    --text-dark: #1f2937;          /* Texto principal oscuro */
-    --text-light: #6b7280;         /* Texto secundario/descriptivo */
-
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    
     /* === Backgrounds === */
-    --background: #ffffff;         /* Fondo principal */
-    --background-gray: #f9fafb;    /* Fondo alternativo gris claro */
-    --border-color: #e5e7eb;       /* Bordes sutiles */
-
+    --background: #ffffff;
+    --background-gray: #f9fafb;
+    --border-color: #e5e7eb;
+    
     /* === Status Colors === */
-    --success-color: #10b981;      /* Verde - Estados positivos */
-
+    --success-color: #10b981;
+    
     /* === Spacing System (8px base) === */
-    --spacing-xs: 0.5rem;   /* 8px  - Espaciado mínimo */
-    --spacing-sm: 1rem;     /* 16px - Espaciado pequeño */
-    --spacing-md: 2rem;     /* 32px - Espaciado medio */
-    --spacing-lg: 4rem;     /* 64px - Espaciado grande */
-    --spacing-xl: 6rem;     /* 96px - Espaciado extra grande */
-
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
     /* === Border & Shadows === */
-    --border-radius: 0.5rem;                               /* Radio estándar */
-    --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);        /* Sombra sutil */
-    --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra elevada */
+    --border-radius: 0.5rem;
+    --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -68,6 +79,7 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-bottom: 60px;
 }
 
 
@@ -143,7 +155,6 @@ body {
     transition: all 0.3s ease;
 }
 
-
 /* === Footer fijo y ultra compacto === */
 .footer {
     position: fixed;
@@ -158,7 +169,7 @@ body {
 
 .footer-contact {
     background: var(--success-color);
-    padding: 0.3rem 0 0.1rem 0;  /* ← Reducido espacio inferior */
+    padding: 0.3rem 0 0.1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,19 +180,19 @@ body {
     background: var(--success-color);
     color: white;
     text-align: center;
-    padding: 0.1rem 0 0.3rem 0;  /* ← Reducido espacio superior */
+    padding: 0.1rem 0 0.3rem 0;
     margin: 0;
-    font-size: 0.7rem;           /* ← Más pequeño (antes 0.75rem) */
+    font-size: 0.7rem;
 }
 
 .footer-contact-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;                /* ← Menos espacio entre ícono y texto */
+    gap: 0.25rem;
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.8rem;           /* ← Más pequeño (antes 0.85rem) */
+    font-size: 0.8rem;
     transition: opacity 0.3s ease;
 }
 
@@ -190,14 +201,8 @@ body {
 }
 
 .footer-icon {
-    font-size: 1rem;             /* ← Más pequeño (antes 1.1rem) */
+    font-size: 1rem;
 }
-
-/* Padding del body para footer fijo */
-body {
-    padding-bottom: 60px;        /* ← Reducido (antes 80px) */
-}
-
 
 
 /* ===========================================
@@ -212,7 +217,6 @@ body {
     color: white;
 }
 
-/* Layout de 2 columnas: foto + texto */
 .hero-content {
     max-width: 1000px;
     margin: 0 auto;
@@ -221,7 +225,6 @@ body {
     gap: 3rem;
 }
 
-/* Foto de perfil circular */
 .hero-image {
     flex-shrink: 0;
     width: 170px;
@@ -240,7 +243,6 @@ body {
     object-position: center 30%;
 }
 
-/* Contenido de texto */
 .hero-text {
     flex: 1;
 }
@@ -294,7 +296,6 @@ body {
     color: var(--text-dark);
 }
 
-
 /* Fondos alternados por sección */
 #sobre-mi {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
@@ -318,21 +319,18 @@ body {
     padding-right: 0;
 }
 
-/* Skills - Primera sección (arriba) */
 #skills {
     padding-top: 4rem;      
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
 
-/* Credenciales - Segunda sección (abajo) */
 #credenciales {
     padding-top: 0 !important;
     padding-bottom: 4rem;   
     margin-top: 0 !important;
 }
 
-/* Eliminar espacios entre los contenedores */
 #skills .container {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
@@ -343,7 +341,6 @@ body {
     padding-top: 0 !important;
 }
 
-/* Títulos con espacio visual pero sin crear gap */
 #skills .section-title {
     margin-bottom: 3rem;
     padding-top: 0;
@@ -355,13 +352,12 @@ body {
     padding-top: 2rem;
 }
 
-/* Ajustar grid de skills para eliminar espacio inferior */
 #skills .skills-grid {
     margin-bottom: 0;
 }
 
 
-/* === About Section (Sobre Mí) === */
+/* === About Section === */
 .about-content {
     max-width: 800px;
     margin: 0 auto;
@@ -380,7 +376,7 @@ body {
 }
 
 
-/* === Credentials Section (Credenciales) === */
+/* === Credentials Section === */
 .credentials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -391,7 +387,7 @@ body {
 .credential-card {
     background: white;
     padding: var(--spacing-md);
-    padding-bottom: 2.5rem; /* Espacio extra para tooltip */
+    padding-bottom: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
@@ -432,7 +428,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Logo de credencial clickeable */
 .credential-logo-btn {
     background: transparent;
     border: none;
@@ -457,7 +452,7 @@ body {
 }
 
 
-/* === Projects Section (Proyectos) === */
+/* === Projects Section === */
 .projects-grid {
     display: grid;
     gap: var(--spacing-lg);
@@ -479,7 +474,6 @@ body {
     border-color: #3b82f6;
 }
 
-/* Video responsive 16:9 */
 .project-video {
     position: relative;
     padding-bottom: 56.25%;
@@ -526,7 +520,6 @@ body {
     gap: 0.5rem;
 }
 
-/* Lista de características del proyecto */
 .project-features {
     list-style: none;
     padding: 0;
@@ -551,7 +544,6 @@ body {
     font-size: 1.3rem;
 }
 
-/* Caja de acceso admin */
 .project-access {
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     padding: 1.25rem;
@@ -580,7 +572,6 @@ body {
     box-shadow: 0 2px 4px rgba(30, 64, 175, 0.3);
 }
 
-/* Tags de tecnologías */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -606,7 +597,6 @@ body {
     box-shadow: 0 4px 8px rgba(37, 99, 235, 0.15);
 }
 
-/* Enlaces de proyecto */
 .project-links {
     display: flex;
     gap: 1rem;
@@ -650,7 +640,7 @@ body {
 }
 
 
-/* === Skills Section (Habilidades) === */
+/* === Skills Section CON LOGOS === */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -678,22 +668,25 @@ body {
 }
 
 .skill-category li {
-    padding: var(--spacing-xs) 0;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+    padding-left: 0;
     color: var(--text-light);
-    position: relative;
-    padding-left: 1.5rem;
 }
 
-.skill-category li:before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
+/* Logos de tecnologías */
+.skill-category li i {
+    margin-right: 0.6rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
+/* SIN flechas - eliminado el :before */
 
-/* === Contact Section (Contacto) === */
+
+/* === Contact Section === */
 .contact-content {
     max-width: 900px;
     margin: 0 auto;
@@ -753,21 +746,21 @@ body {
     font-weight: 500;
 }
 
-/* Colores específicos para cada ícono de contacto */
+/* Colores de íconos de contacto */
 .contact-card:nth-child(1) .contact-icon i {
-    color: #EA4335; /* Rojo de Gmail */
+    color: #EA4335;
 }
 
 .contact-card:nth-child(2) .contact-icon i {
-    color: #25D366; /* Verde de WhatsApp */
+    color: #25D366;
 }
 
 .contact-card:nth-child(3) .contact-icon i {
-    color: #333333; /* Negro de GitHub */
+    color: #333333;
 }
 
 .contact-card:nth-child(4) .contact-icon i {
-    color: #0A66C2; /* Azul de LinkedIn */
+    color: #0A66C2;
 }
 
 
@@ -775,7 +768,6 @@ body {
    7. UI COMPONENTS
    =========================================== */
 
-/* === Buttons === */
 .btn {
     padding: 0.875rem 2rem;
     border-radius: var(--border-radius);
@@ -807,7 +799,6 @@ body {
     color: var(--primary-color);
 }
 
-
 /* === Tooltips === */
 .credential-tooltip {
     position: absolute;
@@ -829,7 +820,6 @@ body {
     z-index: 10;
 }
 
-/* Flechita del tooltip */
 .credential-tooltip::before {
     content: '';
     position: absolute;
@@ -846,7 +836,6 @@ body {
     visibility: visible;
     transform: translateX(-50%) translateY(0);
 }
-
 
 /* === Modals === */
 .diploma-modal {
@@ -917,10 +906,8 @@ body {
    9. MEDIA QUERIES & RESPONSIVE DESIGN
    =========================================== */
 
-/* === Tablet & Mobile (768px and below) === */
 @media (max-width: 768px) {
     
-    /* Navigation responsive */
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -942,7 +929,6 @@ body {
         display: flex;
     }
 
-    /* Hero responsive - Layout vertical */
     .hero {
         padding-top: 100px;
         padding-bottom: 60px;
@@ -978,14 +964,12 @@ body {
         gap: 0.75rem;
     }
 
-    /* Grids a una columna en mobile */
     .credentials-grid,
     .skills-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Proyectos responsive */
     .project-content {
         padding: 1.5rem;
     }
@@ -1003,24 +987,18 @@ body {
         width: 100%;
     }
 
-    /* ========================================
-       CONTACTO - Pantalla completa naranja
-       ======================================== */
-    
-    /* Body sin padding extra */
+    /* Contacto móvil */
     body {
         padding-bottom: 0 !important;
         margin: 0 !important;
     }
     
-    /* Main ajustado */
     main {
         padding-top: 68px !important;
         margin: 0 !important;
         min-height: 100vh;
     }
     
-    /* Sección contacto ocupa toda la altura */
     #contacto {
         padding-top: 0 !important;
         margin-top: -2px !important;
@@ -1033,14 +1011,10 @@ body {
         margin-bottom: 1rem !important;
     }
     
-    /* Contact grid con padding inferior */
     .contact-grid {
         padding-bottom: 2rem;
     }
 }
-
-
-
 
 /* ===========================================
    FIN DEL ARCHIVO CSS
