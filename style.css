@@ -875,8 +875,9 @@ body {
    =========================================== */
 
 /* === Tablet & Mobile (768px and below) === */
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
+    
     /* Navigation responsive */
     .nav-menu {
         position: fixed;
@@ -959,7 +960,30 @@ body {
         justify-content: center;
         width: 100%;
     }
+
+    /* ========================================
+       NUEVO - Eliminar línea blanca en página de contacto
+       ======================================== */
+    
+    main {
+        padding-top: 68px !important;
+    }
+    
+    #contacto {
+        padding-top: 0 !important;
+        margin-top: -2px !important;
+    }
+    
+    .section-title {
+        padding-top: 1.5rem !important;
+    }
+    
+    /* Ajustar padding inferior para footer fijo */
+    body {
+        padding-bottom: 65px !important;
+    }
 }
+
 
 
 /* ===========================================
