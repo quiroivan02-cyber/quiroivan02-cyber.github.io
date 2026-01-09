@@ -2,6 +2,18 @@
    CREDENCIALES.CSS - Habilidades y Credenciales
    ========================================= */
 
+/* Fondo completo morado - sin blanco */
+html,
+body {
+    background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
+    min-height: 100vh;
+}
+
+main {
+    background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
+    min-height: 100vh;
+}
+
 /* Fondos unificados morados */
 #credenciales,
 #skills {
