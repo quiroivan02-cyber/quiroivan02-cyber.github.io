@@ -1,1 +1,100 @@
+/* =========================================
+   CONTACTO.CSS - Página de Contacto
+   ========================================= */
+
+#contacto {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    padding-top: 100px;
+}
+
+.contact-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 4rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-icon i {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon i {
+    transform: scale(1.1);
+}
+
+.contact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.contact-card p {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Colores específicos por ícono */
+.contact-card:nth-child(1) .contact-icon i {
+    color: #EA4335;
+}
+
+.contact-card:nth-child(2) .contact-icon i {
+    color: #25D366;
+}
+
+.contact-card:nth-child(3) .contact-icon i {
+    color: #333333;
+}
+
+.contact-card:nth-child(4) .contact-icon i {
+    color: #0A66C2;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 2rem;
+    }
+
+    #contacto {
+        padding-top: 0 !important;
+        margin-top: -2px !important;
+        min-height: calc(100vh - 68px - 60px);
+        padding-bottom: 70px !important;
+    }
+}
 
