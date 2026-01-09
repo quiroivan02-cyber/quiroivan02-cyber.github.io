@@ -983,7 +983,7 @@ body {
 
 .footer-icon {
     font-size: 1.2rem;
-}
+
 
 }
 /* === Contact Section (Contacto) === */
@@ -1017,7 +1017,7 @@ body {
 .contact-card:nth-child(4) .contact-icon i {
     color: #0A66C2; /* Azul de LinkedIn */
 }
-
+}
 
 /* ===========================================
    FIN DEL ARCHIVO CSS
