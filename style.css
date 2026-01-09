@@ -313,31 +313,42 @@ body {
 #skills {
     background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
     color: white;
+    margin: 0;              /* ← SIN márgenes */
+    padding-left: 0;        /* ← SIN padding lateral */
+    padding-right: 0;       /* ← SIN padding lateral */
 }
 
 /* Skills - Primera sección (arriba) */
 #skills {
-    padding-top: 6rem;      
-    padding-bottom: 0;      /* ← SIN espacio abajo */
-    margin-bottom: 0;       /* ← SIN margen abajo */
+    padding-top: 4rem;      
+    padding-bottom: 0;
+    margin: 0;
 }
 
 /* Credenciales - Segunda sección (abajo) */
 #credenciales {
-    padding-top: 0;         /* ← SIN espacio arriba */
-    margin-top: 0;          /* ← SIN margen arriba */
-    padding-bottom: 6rem;   
+    padding-top: 0;
+    padding-bottom: 4rem;   
+    margin: 0;
 }
 
-/* Títulos de sección ajustados para unificación */
+/* Container dentro de estas secciones sin padding lateral */
+#skills .container,
+#credenciales .container {
+    padding-left: 1rem;     /* Mínimo padding para el contenido */
+    padding-right: 1rem;
+}
+
+/* Títulos ajustados */
 #credenciales .section-title {
-    margin-top: 4rem;       /* Espacio visual entre contenidos */
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 #skills .section-title {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
+
 
 
 
