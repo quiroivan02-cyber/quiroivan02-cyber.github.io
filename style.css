@@ -988,6 +988,37 @@ body {
 }
 
 }
+/* === Contact Section (Contacto) === */
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-icon i {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon i {
+    transform: scale(1.1);
+}
+
+/* Colores específicos para cada ícono */
+.contact-card:nth-child(1) .contact-icon i {
+    color: #EA4335; /* Rojo de Gmail */
+}
+
+.contact-card:nth-child(2) .contact-icon i {
+    color: #25D366; /* Verde de WhatsApp */
+}
+
+.contact-card:nth-child(3) .contact-icon i {
+    color: #333333; /* Negro de GitHub */
+}
+
+.contact-card:nth-child(4) .contact-icon i {
+    color: #0A66C2; /* Azul de LinkedIn */
+}
 
 
 /* ===========================================
