@@ -1,31 +1,7 @@
-/* ===========================================
-   PORTFOLIO CSS - ÍNDICE DE CONTENIDOS
-   ===========================================
-   1. Reset & Base Styles
-   2. CSS Variables
-   3. Typography & Base Elements
-   4. Layout Components
-      - Container
-      - Header & Navigation
-      - Footer
-   5. Hero Section
-   6. Content Sections
-      - About (Sobre Mí)
-      - Credentials (Credenciales)
-      - Projects (Proyectos)
-      - Skills (Habilidades)
-      - Contact (Contacto)
-   7. UI Components
-      - Buttons
-      - Cards
-      - Tooltips
-      - Modals
-   8. Animations
-   9. Media Queries & Responsive Design
-   =========================================== */
 
 
-/* ===========================================
+
+
    1. RESET & BASE STYLES
    =========================================== */
 * {
@@ -61,22 +37,22 @@ section[id] {
     --secondary-color: #1e40af;    /* Azul oscuro - Hover states */
     --text-dark: #1f2937;          /* Texto principal oscuro */
     --text-light: #6b7280;         /* Texto secundario/descriptivo */
-    
+
     /* === Backgrounds === */
     --background: #ffffff;         /* Fondo principal */
     --background-gray: #f9fafb;    /* Fondo alternativo gris claro */
     --border-color: #e5e7eb;       /* Bordes sutiles */
-    
+
     /* === Status Colors === */
     --success-color: #10b981;      /* Verde - Estados positivos */
-    
+
     /* === Spacing System (8px base) === */
     --spacing-xs: 0.5rem;   /* 8px  - Espaciado mínimo */
     --spacing-sm: 1rem;     /* 16px - Espaciado pequeño */
     --spacing-md: 2rem;     /* 32px - Espaciado medio */
     --spacing-lg: 4rem;     /* 64px - Espaciado grande */
     --spacing-xl: 6rem;     /* 96px - Espaciado extra grande */
-    
+
     /* === Border & Shadows === */
     --border-radius: 0.5rem;                               /* Radio estándar */
     --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);        /* Sombra sutil */
@@ -165,11 +141,6 @@ body {
     background: var(--text-dark);
     border-radius: 2px;
     transition: all 0.3s ease;
-}
-
-/* === Footer === */
-.footer {
-    margin-top: var(--spacing-lg);
 }
 
 /* === Footer === */
@@ -707,6 +678,15 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
+.contact-icon i {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon i {
+    transform: scale(1.1);
+}
+
 .contact-card h3 {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-xs);
@@ -716,6 +696,23 @@ body {
 .contact-card p {
     color: var(--primary-color);
     font-weight: 500;
+}
+
+/* Colores específicos para cada ícono de contacto */
+.contact-card:nth-child(1) .contact-icon i {
+    color: #EA4335; /* Rojo de Gmail */
+}
+
+.contact-card:nth-child(2) .contact-icon i {
+    color: #25D366; /* Verde de WhatsApp */
+}
+
+.contact-card:nth-child(3) .contact-icon i {
+    color: #333333; /* Negro de GitHub */
+}
+
+.contact-card:nth-child(4) .contact-icon i {
+    color: #0A66C2; /* Azul de LinkedIn */
 }
 
 
@@ -867,7 +864,7 @@ body {
 
 /* === Tablet & Mobile (768px and below) === */
 @media (max-width: 768px) {
-    
+
     /* Navigation responsive */
     .nav-menu {
         position: fixed;
@@ -937,53 +934,21 @@ body {
     .project-content {
         padding: 1.5rem;
     }
-    
+
     .project-content h3 {
         font-size: 1.5rem;
     }
-    
+
     .project-links {
         flex-direction: column;
     }
-    
+
     .project-link {
         justify-content: center;
         width: 100%;
     }
-
-
-/* === Contact Section (Contacto) === */
-.contact-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
 }
 
-.contact-icon i {
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover .contact-icon i {
-    transform: scale(1.1);
-}
-
-/* Colores específicos para cada ícono */
-.contact-card:nth-child(1) .contact-icon i {
-    color: #EA4335; /* Rojo de Gmail */
-}
-
-.contact-card:nth-child(2) .contact-icon i {
-    color: #25D366; /* Verde de WhatsApp */
-}
-
-.contact-card:nth-child(3) .contact-icon i {
-    color: #333333; /* Negro de GitHub */
-}
-
-.contact-card:nth-child(4) .contact-icon i {
-    color: #0A66C2; /* Azul de LinkedIn */
-}
-}
 
 /* ===========================================
    FIN DEL ARCHIVO CSS
