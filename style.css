@@ -294,27 +294,37 @@ body {
     color: var(--text-dark);
 }
 
+
 /* Fondos alternados por sección */
 #sobre-mi {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
-}
-
-#credenciales {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
 }
 
 #proyectos {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
 }
 
+#contacto {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+}
+
+/* === Credenciales y Skills UNIFICADOS === */
+#credenciales,
 #skills {
     background: linear-gradient(135deg, #6d28d9 0%, #a855f7 50%, #ec4899 100%);
     color: white;
 }
 
-#contacto {
-    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+/* Skills - Primera sección (arriba) */
+#skills {
+    padding-top: 6rem;      /* Espaciado normal arriba */
+    padding-bottom: 2rem;   /* Poco espacio abajo */
+}
+
+/* Credenciales - Segunda sección (abajo) */
+#credenciales {
+    padding-top: 2rem;      /* Poco espacio arriba - Continúa desde skills */
+    padding-bottom: 6rem;   /* Espaciado normal abajo */
 }
 
 
