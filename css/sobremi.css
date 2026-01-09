@@ -2,9 +2,22 @@
    SOBREMI.CSS - Página Sobre Mí
    ========================================= */
 
+/* Fondo completo naranja/rojo - sin blanco */
+html,
+body {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    min-height: 100vh;
+}
+
+main {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    min-height: 100vh;
+}
+
 #sobre-mi {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
     padding-top: 100px;
+    min-height: 100vh;
 }
 
 .about-content {
