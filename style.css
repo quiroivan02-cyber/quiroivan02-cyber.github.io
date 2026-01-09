@@ -875,7 +875,6 @@ body {
    =========================================== */
 
 /* === Tablet & Mobile (768px and below) === */
-
 @media (max-width: 768px) {
     
     /* Navigation responsive */
@@ -962,27 +961,41 @@ body {
     }
 
     /* ========================================
-       NUEVO - Eliminar línea blanca en página de contacto
+       CONTACTO - Pantalla completa naranja
        ======================================== */
     
-    main {
-        padding-top: 68px !important;
+    /* Body sin padding extra */
+    body {
+        padding-bottom: 0 !important;
+        margin: 0 !important;
     }
     
+    /* Main ajustado */
+    main {
+        padding-top: 68px !important;
+        margin: 0 !important;
+        min-height: 100vh;
+    }
+    
+    /* Sección contacto ocupa toda la altura */
     #contacto {
         padding-top: 0 !important;
         margin-top: -2px !important;
+        min-height: calc(100vh - 68px - 60px);
+        padding-bottom: 70px !important;
     }
     
     .section-title {
         padding-top: 1.5rem !important;
+        margin-bottom: 1rem !important;
     }
     
-    /* Ajustar padding inferior para footer fijo */
-    body {
-        padding-bottom: 65px !important;
+    /* Contact grid con padding inferior */
+    .contact-grid {
+        padding-bottom: 2rem;
     }
 }
+
 
 
 
