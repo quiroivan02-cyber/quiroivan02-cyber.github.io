@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credenciales y Habilidades | Iván Santiago Quiroga</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo"><a href="index.html">ISQ</a></div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="credenciales.html" class="active">Credenciales y Habilidades</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top:100px;">
+
+    <!-- Credenciales -->
+    <section class="section" id="credenciales">
+      <div class="container">
+        <h2 class="section-title">Formación y Certificaciones</h2>
+        <div class="credentials-grid">
+
+          <!-- UTP -->
+          <div class="credential-card">
+            <button class="credential-logo-btn" data-diploma="diploma-utp.png" title="Click para ver credencial">
+              <img src="assets/logo-utp.png" alt="Universidad Tecnológica de Pereira">
+              <span class="credential-tooltip">Click para ver credencial</span>
+            </button>
+            <h3>Ingeniería Industrial</h3>
+            <p class="credential-institution">Universidad Tecnológica de Pereira</p>
+            <p class="credential-year">2023</p>
+            <p class="credential-detail">Acreditación EUR-ACE</p>
+          </div>
+
+          <!-- SENA -->
+          <div class="credential-card">
+            <button class="credential-logo-btn" data-diploma="diploma-sena.png" title="Click para ver credencial">
+              <img src="assets/logo-sena.png" alt="SENA">
+              <span class="credential-tooltip">Click para ver credencial</span>
+            </button>
+            <h3>Técnico en IA</h3>
+            <p class="credential-institution">SENA</p>
+            <p class="credential-year">2025</p>
+            <p class="credential-detail">Procesamiento de Datos e Inteligencia Artificial</p>
+          </div>
+
+          <!-- Talento Tech -->
+          <div class="credential-card">
+            <button class="credential-logo-btn" data-diploma="diploma-talento-tech.png" title="Click para ver credencial">
+              <img src="assets/logo-talento-tech.png" alt="Talento Tech">
+              <span class="credential-tooltip">Click para ver credencial</span>
+            </button>
+            <h3>Bootcamp Análisis de Datos</h3>
+            <p class="credential-institution">MinTIC / U. de Antioquia / U. de Caldas</p>
+            <p class="credential-year">2025</p>
+            <p class="credential-detail">159 horas - Nivel Básico</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Lenguajes</h3>
+            <ul>
+              <li>JavaScript / Node.js</li>
+              <li>Python</li>
+              <li>Google Apps Script</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Herramientas & Frameworks</h3>
+            <ul>
+              <li>n8n (Automatización)</li>
+              <li>AppSheet</li>
+              <li>Google Workspace</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Bases de Datos & Análisis</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>Google Sheets</li>
+              <li>Excel Avanzado</li>
+              <li>SAP</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Áreas de Expertise</h3>
+            <ul>
+              <li>Automatización de Procesos</li>
+              <li>IA Aplicada</li>
+              <li>Análisis de Datos</li>
+              <li>Gestión de Inventarios</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Diploma -->
+  <div id="diplomaModal" class="diploma-modal">
+    <div class="diploma-modal-content">
+      <span id="diplomaClose" class="diploma-close">&times;</span>
+      <img id="diplomaImage" src="" alt="Diploma">
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
