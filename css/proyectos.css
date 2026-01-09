@@ -2,9 +2,22 @@
    PROYECTOS.CSS - Página de Proyectos
    ========================================= */
 
+/* Fondo completo naranja/rojo - sin blanco */
+html,
+body {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    min-height: 100vh;
+}
+
+main {
+    background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
+    min-height: 100vh;
+}
+
 #proyectos {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
     padding-top: 100px;
+    min-height: 100vh;
 }
 
 .projects-grid {
@@ -212,4 +225,3 @@
         width: 100%;
     }
 }
-
