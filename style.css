@@ -172,29 +172,39 @@ body {
     margin-top: var(--spacing-lg);
 }
 
-.footer-copyright {
-    background: #111827;
-    color: #f9fafb;
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.9;
+/* === Footer === */
+.footer {
+    margin-top: 0;
+    width: 100%;
+    background: var(--success-color);
 }
 
 .footer-contact {
     background: var(--success-color);
-    padding: 0.75rem 0;
+    padding: 0.75rem 0 0.25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-copyright {
+    background: var(--success-color);
+    color: white;
+    text-align: center;
+    padding: 0.25rem 0 0.75rem 0;
+    margin: 0;
+    font-size: 0.85rem;
 }
 
 .footer-contact-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: opacity 0.3s ease;
 }
 
@@ -941,51 +951,7 @@ body {
         width: 100%;
     }
 
-    /* === Footer === */
-.footer {
-    margin-top: 0;
-    width: 100%;
-    background: var(--success-color);
-}
 
-.footer-contact {
-    background: var(--success-color);
-    padding: 0.75rem 0 0.25rem 0;  /* ← Muy reducido */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;  /* ← Solo 1rem de separación */
-}
-
-.footer-copyright {
-    background: var(--success-color);
-    color: white;
-    text-align: center;
-    padding: 0.25rem 0 0.75rem 0;  /* ← Muy reducido */
-    margin: 0;
-    font-size: 0.85rem;  /* ← Ligeramente más pequeño */
-}
-
-.footer-contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;  /* ← Mínimo espacio entre ícono y texto */
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: opacity 0.3s ease;
-}
-
-.footer-contact-link:hover {
-    opacity: 0.8;
-}
-
-.footer-icon {
-    font-size: 1.2rem;
-
-
-}
 /* === Contact Section (Contacto) === */
 .contact-icon {
     font-size: 2.5rem;
