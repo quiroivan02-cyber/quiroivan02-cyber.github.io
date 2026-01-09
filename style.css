@@ -631,11 +631,55 @@ body {
 }
 
 /* Footer */
+/* Footer estilo barra inferior */
 .footer {
-    background: var(--text-dark);
-    color: white;
-    text-align: center;
-    padding: var(--spacing-md) 0;
+  margin-top: 4rem;
+}
+
+.footer-copyright {
+  background: #111827;
+  color: #f9fafb;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-contact {
+  background: #10b981;
+  padding: 0.75rem 0;
+}
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  opacity: 0.8;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-contact {
+    padding: 0.5rem 0;
+  }
+  
+  .footer-contact-link {
+    font-size: 0.9rem;
+    gap: 0.4rem;
+  }
 }
 
 /* Animations */
