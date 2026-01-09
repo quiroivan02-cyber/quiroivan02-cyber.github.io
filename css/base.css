@@ -47,7 +47,12 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     padding-bottom: 60px;
+    background: white; /* ← Fondo blanco por defecto */
+    min-height: 100vh;
 }
+
+/* Cada página sobrescribirá este fondo con su propio gradiente */
+
 
 /* === CONTAINER === */
 .container {
