@@ -80,7 +80,7 @@ function initHeroSlideshow() {
     }
     
     // Cambiar imagen cada 3 segundos
-    setInterval(showNextSlide, 3000);
+    setInterval(showNextSlide, 2500);
 }
 
 /* =========================================
