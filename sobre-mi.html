@@ -1,180 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí - Iván Santiago Quiroga</title>
-    <link rel="stylesheet" href="css/base.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mí | Iván Santiago Quiroga</title>
+  <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sobre-mi.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">ISQ</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
-                <li><a href="credenciales.html">Credenciales y Habilidades</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <button class="menu-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo"><a href="index.html">ISQ</a></div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+          <li><a href="credenciales.html">Credenciales y Habilidades</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top:100px;">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-content">
+          <p>
+            Soy Ingeniero Industrial con especialización en <strong>Procesamiento de Datos e Inteligencia Artificial</strong>, 
+            apasionado por optimizar procesos mediante automatización y análisis de datos.
+          </p>
+          <p>
+            Mi enfoque combina ingeniería, programación y pensamiento analítico para crear soluciones tecnológicas 
+            que generen impacto real en las organizaciones. Desde sistemas de gestión de inventarios hasta bots 
+            inteligentes y dashboards interactivos, mi objetivo es hacer que la tecnología trabaje para las personas.
+          </p>
         </div>
-    </nav>
+      </div>
+    </section>
+  </main>
 
-    <!-- Main Content -->
-    <main>
-        <section id="sobre-mi">
-            <div class="container">
-                <h1 class="section-title">Sobre mí</h1>
-                
-                <!-- Introducción Principal -->
-                <div class="about-intro">
-                    <p>
-                        Soy <strong>Ingeniero Industrial</strong> con especialización en <strong>Procesamiento de Datos e Inteligencia Artificial</strong>, 
-                        apasionado por optimizar procesos mediante automatización y análisis de datos.
-                    </p>
-                    <p>
-                        Mi enfoque combina ingeniería, programación y pensamiento analítico para crear soluciones 
-                        tecnológicas que generen impacto real en las organizaciones. Desde sistemas de gestión de 
-                        inventarios hasta bots inteligentes y dashboards interactivos, mi objetivo es hacer que la 
-                        tecnología trabaje para las personas.
-                    </p>
-                </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-                <!-- Fortalezas -->
-                <div class="about-section">
-                    <h2>Fortalezas Profesionales</h2>
-                    <div class="about-content">
-                        <p>
-                            <i class="fas fa-brain"></i>
-                            <strong>Pensamiento Analítico:</strong> Capacidad para descomponer problemas complejos en soluciones 
-                            simples y escalables, aplicando lógica estructurada y análisis de datos.
-                        </p>
-                        <p>
-                            <i class="fas fa-rocket"></i>
-                            <strong>Aprendizaje Continuo:</strong> Autodidacta con habilidad para dominar nuevas tecnologías 
-                            rápidamente. Siempre actualizado con las últimas tendencias en desarrollo.
-                        </p>
-                        <p>
-                            <i class="fas fa-code"></i>
-                            <strong>Desarrollo Full Stack:</strong> Experiencia práctica en frontend, backend, automatización 
-                            con APIs y despliegue de aplicaciones web funcionales.
-                        </p>
-                        <p>
-                            <i class="fas fa-lightbulb"></i>
-                            <strong>Resolución de Problemas:</strong> Enfoque práctico para identificar obstáculos, proponer 
-                            soluciones innovadoras y ejecutar proyectos de inicio a fin.
-                        </p>
-                        <p>
-                            <i class="fas fa-cogs"></i>
-                            <strong>Automatización Inteligente:</strong> Especialización en crear bots, scripts y flujos 
-                            automatizados que optimizan procesos empresariales y ahorran tiempo.
-                        </p>
-                        <p>
-                            <i class="fas fa-chart-line"></i>
-                            <strong>Análisis de Datos:</strong> Transformo datos en insights accionables mediante dashboards 
-                            interactivos, reportes automatizados y visualizaciones efectivas.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Valores -->
-                <div class="about-section">
-                    <h2>Valores y Principios</h2>
-                    <div class="about-content">
-                        <p>
-                            <i class="fas fa-check-circle"></i>
-                            <strong>Calidad y Excelencia:</strong> Compromiso con entregar código limpio, documentado y 
-                            escalable en cada proyecto.
-                        </p>
-                        <p>
-                            <i class="fas fa-users"></i>
-                            <strong>Colaboración:</strong> Trabajo efectivo en equipo, comunicación clara y disposición 
-                            para compartir conocimiento.
-                        </p>
-                        <p>
-                            <i class="fas fa-sync-alt"></i>
-                            <strong>Adaptabilidad:</strong> Flexibilidad para trabajar con diferentes tecnologías, 
-                            metodologías y entornos de desarrollo.
-                        </p>
-                        <p>
-                            <i class="fas fa-clock"></i>
-                            <strong>Responsabilidad:</strong> Cumplimiento de plazos, gestión eficiente del tiempo y 
-                            compromiso con los resultados.
-                        </p>
-                        <p>
-                            <i class="fas fa-graduation-cap"></i>
-                            <strong>Mejora Continua:</strong> Búsqueda constante de optimización, refactorización y 
-                            adopción de mejores prácticas.
-                        </p>
-                        <p>
-                            <i class="fas fa-handshake"></i>
-                            <strong>Integridad:</strong> Transparencia, honestidad y ética profesional en todas las 
-                            interacciones laborales.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Intereses -->
-                <div class="about-section">
-                    <h2>Áreas de Interés</h2>
-                    <div class="about-content">
-                        <p>
-                            <i class="fas fa-robot"></i>
-                            <strong>Inteligencia Artificial:</strong> Fascinado por el potencial de la IA para transformar 
-                            industrias. Exploro chatbots, automatización inteligente y machine learning aplicado.
-                        </p>
-                        <p>
-                            <i class="fas fa-database"></i>
-                            <strong>Business Intelligence:</strong> Me apasiona convertir datos en decisiones estratégicas 
-                            mediante dashboards interactivos y análisis predictivo con herramientas como Power BI.
-                        </p>
-                        <p>
-                            <i class="fas fa-mobile-alt"></i>
-                            <strong>Desarrollo de Aplicaciones:</strong> Interés en expandir mis habilidades hacia el 
-                            desarrollo móvil y crear aplicaciones que resuelvan problemas reales del día a día.
-                        </p>
-                        <p>
-                            <i class="fas fa-shield-alt"></i>
-                            <strong>Ciberseguridad:</strong> Curiosidad por ethical hacking, pruebas de penetración y 
-                            seguridad en aplicaciones web para desarrollar software más robusto.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="about-cta">
-                    <p>
-                        Actualmente me encuentro en búsqueda de oportunidades para aplicar mis conocimientos en proyectos 
-                        desafiantes. Si buscas un profesional comprometido con resultados, conversemos.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="proyectos.html" class="btn btn-primary">
-                            <i class="fas fa-folder-open"></i> Ver Proyectos
-                        </a>
-                        <a href="contacto.html" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i> Contactar
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
