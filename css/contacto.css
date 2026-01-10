@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
 }
 
-/* Asegurar que el main también tenga el gradiente */
 main {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
     min-height: 100vh;
@@ -18,7 +17,7 @@ main {
 #contacto {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
     padding-top: 100px;
-    min-height: 100vh; /* ← Asegura altura completa */
+    min-height: 100vh;
 }
 
 .contact-content {
@@ -33,10 +32,13 @@ main {
     margin-bottom: 4rem;
 }
 
+/* === GRID 2x2 SIMÉTRICO === */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* ← 2 columnas fijas */
     gap: 2rem;
+    max-width: 600px; /* ← Ancho máximo para centrar mejor */
+    margin: 0 auto; /* ← Centrar el grid */
 }
 
 .contact-card {
@@ -78,29 +80,31 @@ main {
 .contact-card p {
     color: var(--primary-color);
     font-weight: 500;
+    word-break: break-word; /* ← Para textos largos */
 }
 
 /* Colores específicos por ícono */
 .contact-card:nth-child(1) .contact-icon i {
-    color: #EA4335;
+    color: #EA4335; /* Gmail */
 }
 
 .contact-card:nth-child(2) .contact-icon i {
-    color: #25D366;
+    color: #25D366; /* WhatsApp */
 }
 
 .contact-card:nth-child(3) .contact-icon i {
-    color: #333333;
+    color: #333333; /* GitHub */
 }
 
 .contact-card:nth-child(4) .contact-icon i {
-    color: #0A66C2;
+    color: #0A66C2; /* LinkedIn */
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* ← 1 columna en móvil */
+        max-width: 100%;
         padding-bottom: 2rem;
     }
 
@@ -109,5 +113,12 @@ main {
         margin-top: -2px !important;
         min-height: calc(100vh - 68px - 60px);
         padding-bottom: 70px !important;
+    }
+}
+
+/* === Tablet (entre 769px y 1024px) === */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-grid {
+        max-width: 700px; /* Más ancho en tablets */
     }
 }
