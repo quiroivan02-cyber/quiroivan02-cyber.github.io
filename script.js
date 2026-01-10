@@ -20,7 +20,7 @@ function initHeroSlideshow() {
     }
     
     // Cambiar imagen cada 2 segundos (2000 ms)
-    setInterval(showNextSlide, 2000);
+    setInterval(showNextSlide, 3000);
 }
 
 // Iniciar slideshow cuando cargue la página
