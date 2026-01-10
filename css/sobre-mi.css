@@ -1,8 +1,8 @@
 /* =========================================
-   SOBRE-MI.CSS - Página Sobre Mí
+   SOBREMI.CSS - Página Sobre Mí
    ========================================= */
 
-/* Fondo completo naranja/coral - sin blanco */
+/* Fondo completo naranja/rojo - sin blanco */
 html,
 body {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
@@ -17,155 +17,22 @@ main {
 #sobre-mi {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
     padding-top: 100px;
-    padding-bottom: 4rem;
     min-height: 100vh;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
-}
-
-/* === INTRODUCCIÓN === */
-.about-intro {
-    max-width: 900px;
-    margin: 0 auto 3rem;
-    background: white;
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    line-height: 1.8;
-    font-size: 1.1rem;
-    color: var(--text-light);
-}
-
-.about-intro p {
-    margin-bottom: 1.5rem;
-}
-
-.about-intro p:last-child {
-    margin-bottom: 0;
-}
-
-.about-intro strong {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-/* === SECCIONES DE CONTENIDO === */
-.about-section {
-    max-width: 900px;
-    margin: 0 auto 3rem;
-    background: white;
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.about-section h2 {
-    font-size: 1.8rem;
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 3px solid var(--primary-color);
-}
-
 .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
     line-height: 1.8;
+    color: var(--text-light);
 }
 
 .about-content p {
-    margin-bottom: 1.5rem;
-    color: var(--text-light);
-    font-size: 1.05rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.about-content p:last-child {
-    margin-bottom: 0;
-}
-
-.about-content i {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-top: 0.2rem;
-    flex-shrink: 0;
-}
-
-.about-content strong {
-    color: var(--text-dark);
-}
-
-/* === CALL TO ACTION === */
-.about-cta {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.about-cta p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    line-height: 1.8;
     margin-bottom: 2rem;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.cta-buttons .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-    #sobre-mi {
-        padding-top: 80px;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .about-intro,
-    .about-section,
-    .about-cta {
-        padding: 1.5rem;
-        font-size: 1rem;
-    }
-
-    .about-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-content p {
-        font-size: 1rem;
-        flex-direction: row;
-    }
-
-    .about-content i {
-        font-size: 1.2rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .cta-buttons .btn {
-        width: 100%;
-    }
+.about-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
 }
