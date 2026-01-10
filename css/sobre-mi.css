@@ -36,3 +36,181 @@ main {
     color: var(--primary-color);
     font-weight: 600;
 }
+
+/* =========================================
+   SECCIÓN DE FORTALEZAS
+   ========================================= */
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.strength-item {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.strength-item:hover {
+    border-left-color: #fb7185;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(251, 113, 133, 0.3);
+    transform: translateY(-5px);
+}
+
+.strength-icon {
+    font-size: 2.5rem;
+    color: #fb7185;
+    margin-bottom: 15px;
+}
+
+.strength-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.strength-item p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   SECCIÓN DE VALORES
+   ========================================= */
+.values-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.value-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.value-item:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(251, 113, 133, 0.3);
+    transform: translateX(10px);
+}
+
+.value-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fb7185;
+    min-width: 70px;
+    opacity: 0.4;
+}
+
+.value-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.value-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   SECCIÓN DE HOBBIES
+   ========================================= */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.hobby-card {
+    padding: 30px;
+    background: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.hobby-card:hover::before {
+    top: -100%;
+    right: -100%;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(251, 113, 133, 0.5);
+}
+
+.hobby-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hobby-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.hobby-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .value-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .value-number {
+        font-size: 2rem;
+    }
+    
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+}
