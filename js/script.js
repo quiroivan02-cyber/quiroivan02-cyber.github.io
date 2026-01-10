@@ -1,4 +1,64 @@
 /* =========================================
+   SCRIPT.JS - JavaScript Principal
+   ========================================= */
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // === INICIALIZAR FUNCIONALIDADES ===
+    initMobileMenu();
+    initHeroSlideshow();
+    initDiplomaModal();
+    initScrollEffects();
+    initAnimations();
+    initSmoothScroll();
+    
+    // Mensaje de bienvenida en consola
+    console.log('%c👋 Hola! Gracias por revisar mi portafolio', 'color: #2563eb; font-size: 16px; font-weight: bold;');
+    console.log('%c📧 Contacto: isquiroga@utp.edu.co', 'color: #6b7280; font-size: 14px;');
+});
+
+/* =========================================
+   MENU MOBILE
+   ========================================= */
+function initMobileMenu() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (!navToggle || !navMenu) return; // Salir si no existen
+    
+    // Toggle menu
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        
+        // Animar hamburger icon
+        const spans = navToggle.querySelectorAll('span');
+        if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+    
+    // Cerrar menu al hacer clic en un link
+    const navLinks = document.querySelectorAll('.nav-menu a, .nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const spans = navToggle.querySelectorAll('span');
+            if (spans.length >= 3) {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    });
+}
+
+/* =========================================
    SLIDESHOW AUTOMÁTICO DEL HERO
    ========================================= */
 function initHeroSlideshow() {
@@ -19,140 +79,138 @@ function initHeroSlideshow() {
         slides[currentSlide].classList.add('active');
     }
     
-    // Cambiar imagen cada 2 segundos (2000 ms)
+    // Cambiar imagen cada 3 segundos
     setInterval(showNextSlide, 3000);
 }
 
-// Iniciar slideshow cuando cargue la página
-document.addEventListener('DOMContentLoaded', function() {
-    initHeroSlideshow();
-});
+/* =========================================
+   MODAL DE DIPLOMAS
+   ========================================= */
+function initDiplomaModal() {
+    const modal = document.getElementById('diplomaModal');
+    const modalImg = document.getElementById('diplomaImage');
+    const closeBtn = document.getElementById('diplomaClose');
+    const buttons = document.querySelectorAll('.credential-logo-btn');
 
+    if (!modal || !modalImg) return; // Salir si no existe el modal
 
-// Mobile Navigation Toggle
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    
-    // Animate hamburger icon
-    const spans = navToggle.querySelectorAll('span');
-    if (navMenu.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-    } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-    }
-});
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        const spans = navToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+    // Abrir modal al hacer clic en logos
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const diplomaSrc = btn.getAttribute('data-diploma');
+            if (diplomaSrc) {
+                modalImg.src = `assets/${diplomaSrc}`;
+                modal.style.display = 'flex';
+            }
+        });
     });
-});
 
-// Header scroll effect
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1)';
+    // Cerrar modal
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            modalImg.src = '';
+        });
     }
-    
-    lastScroll = currentScroll;
-});
 
-// Smooth scroll for anchor links - MEJORADO
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 100; // Ajusta este valor según el alto de tu header
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+    // Cerrar al hacer clic fuera de la imagen
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            modalImg.src = '';
         }
     });
-});
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            modalImg.src = '';
         }
     });
-}, observerOptions);
+}
 
-// Observe all sections for animation
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
-
-// Add animation to cards on scroll
-const cards = document.querySelectorAll('.credential-card, .project-card, .skill-category, .contact-card');
-cards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// Console message
-console.log('%c👋 Hola! Gracias por revisar mi portafolio', 'color: #2563eb; font-size: 16px; font-weight: bold;');
-console.log('%c📧 Contacto: isquiroga@utp.edu.co', 'color: #6b7280; font-size: 14px;');
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.credential-logo-btn');
-  const modal = document.getElementById('diplomaModal');
-  const modalImg = document.getElementById('diplomaImage');
-  const closeBtn = document.getElementById('diplomaClose');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const diplomaSrc = btn.getAttribute('data-diploma');
-      modalImg.src = `assets/${diplomaSrc}`;
-      modal.style.display = 'flex';
+/* =========================================
+   EFECTOS DE SCROLL EN HEADER
+   ========================================= */
+function initScrollEffects() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+    
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1)';
+        }
+        
+        lastScroll = currentScroll;
     });
-  });
+}
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modalImg.src = '';
-  });
+/* =========================================
+   SMOOTH SCROLL PARA ANCHOR LINKS
+   ========================================= */
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            // Ignorar # vacío o solo #
+            if (!href || href === '#') return;
+            
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const headerOffset = 100;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      modalImg.src = '';
-    }
-  });
-});
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+/* =========================================
+   ANIMACIONES AL HACER SCROLL
+   ========================================= */
+function initAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observar secciones
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+
+    // Observar cards con delay escalonado
+    const cards = document.querySelectorAll('.credential-card, .project-card, .skill-category, .contact-card, .strength-card, .interest-block');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(card);
+    });
+}
