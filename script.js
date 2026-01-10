@@ -1,3 +1,34 @@
+/* =========================================
+   SLIDESHOW AUTOMÁTICO DEL HERO
+   ========================================= */
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    
+    if (slides.length === 0) return; // Si no hay slides, salir
+    
+    let currentSlide = 0;
+    
+    function showNextSlide() {
+        // Quitar clase active de la imagen actual
+        slides[currentSlide].classList.remove('active');
+        
+        // Ir a la siguiente imagen (o volver al inicio)
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Agregar clase active a la nueva imagen
+        slides[currentSlide].classList.add('active');
+    }
+    
+    // Cambiar imagen cada 2 segundos (2000 ms)
+    setInterval(showNextSlide, 2000);
+}
+
+// Iniciar slideshow cuando cargue la página
+document.addEventListener('DOMContentLoaded', function() {
+    initHeroSlideshow();
+});
+
+
 // Mobile Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
