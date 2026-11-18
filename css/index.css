@@ -94,6 +94,19 @@ body {
     animation: fadeInUp 0.8s ease 0.6s both;
 }
 
+.intro-copy {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.section .hero-buttons {
+    margin-bottom: 1rem;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     .hero {

@@ -25,10 +25,13 @@ function initMobileMenu() {
     const navMenu = document.getElementById('navMenu');
     
     if (!navToggle || !navMenu) return; // Salir si no existen
+    navToggle.setAttribute('aria-controls', 'navMenu');
+    navToggle.setAttribute('aria-expanded', 'false');
     
     // Toggle menu
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
         
         // Animar hamburger icon
         const spans = navToggle.querySelectorAll('span');
@@ -48,6 +51,7 @@ function initMobileMenu() {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
             const spans = navToggle.querySelectorAll('span');
             if (spans.length >= 3) {
                 spans[0].style.transform = 'none';
@@ -183,6 +187,7 @@ function initSmoothScroll() {
    ANIMACIONES AL HACER SCROLL
    ========================================= */
 function initAnimations() {
+    if (!('IntersectionObserver' in window)) return;
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
