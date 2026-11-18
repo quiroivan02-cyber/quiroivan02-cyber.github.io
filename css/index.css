@@ -9,6 +9,10 @@ body {
     min-height: 100vh;
 }
 
+.page-main {
+    padding-top: 0;
+}
+
 /* === HERO SECTION === */
 .hero {
     min-height: 80vh;

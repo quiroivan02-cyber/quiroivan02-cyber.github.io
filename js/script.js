@@ -31,7 +31,9 @@ function initMobileMenu() {
     // Toggle menu
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        navToggle.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
+        const isOpen = navMenu.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
         
         // Animar hamburger icon
         const spans = navToggle.querySelectorAll('span');
@@ -52,6 +54,7 @@ function initMobileMenu() {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Abrir menú');
             const spans = navToggle.querySelectorAll('span');
             if (spans.length >= 3) {
                 spans[0].style.transform = 'none';

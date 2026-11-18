@@ -112,6 +112,14 @@ main {
     flex-shrink: 0;
 }
 
+.skill-category li .skill-icon-cyan { color: #00d4ff; }
+.skill-category li .skill-icon-green { color: #217346; }
+.skill-category li .skill-icon-blue { color: #0faaff; }
+.skill-category li .skill-icon-yellow { color: #ffd43b; }
+.skill-category li .skill-icon-coral { color: #ff6b6b; }
+.skill-category li .skill-icon-teal { color: #4ecdc4; }
+.skill-category li .skill-icon-mint { color: #95e1d3; }
+
 /* === CREDENTIALS === */
 .credentials-grid {
     display: grid;

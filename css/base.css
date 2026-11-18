@@ -51,6 +51,10 @@ body {
     min-height: 100vh;
 }
 
+.page-main {
+    padding-top: 100px;
+}
+
 /* Cada página sobrescribirá este fondo con su propio gradiente */
 
 

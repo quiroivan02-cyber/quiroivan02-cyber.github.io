@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre mí | Iván Santiago Quiroga</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/sobre-mi.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <div class="logo"><a href="index.html">ISQ</a></div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
-          <li><a href="credenciales.html">Credenciales y Habilidades</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main style="padding-top:100px;">
+---
+layout: default
+title: "Sobre mí | Iván Santiago Quiroga"
+stylesheet: css/sobre-mi.css
+active_nav: about
+description: "Conoce la experiencia, fortalezas y valores de Iván Santiago Quiroga."
+---
+<main class="page-main">
     <!-- Sección: Sobre mí -->
     <section class="section">
       <div class="container">
@@ -212,26 +189,3 @@
   </main>
 
  <!-- Footer -->
-<footer class="footer">
-  <div class="footer-contact">
-    <!-- WhatsApp con emojis -->
-    <a href="https://wa.me/573197686417?text=%F0%9F%91%8B%20Hola%20Iv%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" class="footer-contact-link" target="_blank" rel="noopener noreferrer">
-  <i class="fa-brands fa-whatsapp footer-icon"></i>
-  +57 319 768 6417
-</a>
-
-    
-    <!-- Gmail con emojis -->
-    <a href="mailto:isquiroga@utp.edu.co?subject=Contacto%20desde%20tu%20portafolio&body=Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
-      <i class="fa-solid fa-envelope footer-icon"></i>
-      isquiroga@utp.edu.co
-    </a>
-  </div>
-  <div class="footer-copyright">
-    © 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.
-  </div>
-</footer>
-
-  <script src="js/script.js"></script>
-</body>
-</html>

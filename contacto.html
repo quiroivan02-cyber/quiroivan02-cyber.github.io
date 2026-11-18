@@ -1,44 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Iván Santiago Quiroga</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/contacto.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-
-<body style="margin: 0; padding: 0;">
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <div class="logo"><a href="index.html">ISQ</a></div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="credenciales.html">Credenciales y Habilidades</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html" class="active">Contacto</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main style="padding-top: 80px; margin: 0;">
-    <section class="section" id="contacto" style="padding: 1.5rem 0 3rem 0; margin: 0;">
-      <h2 class="section-title" style="margin-top: 1rem;">Hablemos</h2>
-      <div class="contact-content" style="padding: 0 1rem;">
+---
+layout: default
+title: "Contacto | Iván Santiago Quiroga"
+stylesheet: css/contacto.css
+active_nav: contact
+description: "Contacta a Iván Santiago Quiroga para proyectos, colaboraciones y oportunidades profesionales."
+---
+<main class="page-main">
+    <section class="section" id="contacto">
+      <h2 class="section-title">Hablemos</h2>
+      <div class="contact-content">
         <p class="contact-intro">¿Tienes un proyecto en mente? Estoy disponible para colaboraciones y nuevas oportunidades.</p>
         <div class="contact-grid">
   <!-- Gmail con mensaje prellenado -->
-  <a href="mailto:isquiroga@utp.edu.co?subject=Contacto%20desde%20tu%20portafolio&body=Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional" target="_blank" rel="noopener noreferrer" class="contact-card">
+  <a href="mailto:isquiroga@utp.edu.co?subject=Contacto%20desde%20tu%20portafolio&body=Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional" class="contact-card">
     <div class="contact-icon">
       <i class="fa-solid fa-envelope"></i>
     </div>
@@ -78,29 +52,3 @@
       </div>
     </section>
   </main>
-
- <footer class="footer">
-  <div class="footer-contact">
-    <!-- WhatsApp con emojis -->
-    <a href="https://wa.me/573197686417?text=%F0%9F%91%8B%20Hola%20Iv%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" class="footer-contact-link" target="_blank" rel="noopener noreferrer">
-  <i class="fa-brands fa-whatsapp footer-icon"></i>
-  +57 319 768 6417
-</a>
-
-    
-    <!-- Gmail con emojis -->
-    <a href="mailto:isquiroga@utp.edu.co?subject=Contacto%20desde%20tu%20portafolio&body=Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
-      <i class="fa-solid fa-envelope footer-icon"></i>
-      isquiroga@utp.edu.co
-    </a>
-  </div>
-  <div class="footer-copyright">
-    © 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.
-  </div>
-</footer>
-
-
-<script src="js/script.js"></script>
-
-</body>
-</html>

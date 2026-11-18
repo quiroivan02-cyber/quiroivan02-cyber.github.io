@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:image" content="{{ '/assets/preview-image.png' | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image" content="{{ '/assets/preview-image.png' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  {% if page.active_nav == 'credentials' %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  {% endif %}
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <div class="logo"><a href="{{ '/' | relative_url }}">ISQ</a></div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="{{ '/' | relative_url }}"{% if page.active_nav == 'home' %} class="active" aria-current="page"{% endif %}>Inicio</a></li>
+          <li><a href="{{ '/sobre-mi.html' | relative_url }}"{% if page.active_nav == 'about' %} class="active" aria-current="page"{% endif %}>Sobre mí</a></li>
+          <li><a href="{{ '/credenciales.html' | relative_url }}"{% if page.active_nav == 'credentials' %} class="active" aria-current="page"{% endif %}>Credenciales y Habilidades</a></li>
+          <li><a href="{{ '/proyectos.html' | relative_url }}"{% if page.active_nav == 'projects' %} class="active" aria-current="page"{% endif %}>Proyectos</a></li>
+          <li><a href="{{ '/contacto.html' | relative_url }}"{% if page.active_nav == 'contact' %} class="active" aria-current="page"{% endif %}>Contacto</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer class="footer">
+    <div class="footer-contact">
+      <a href="https://wa.me/573197686417?text=%F0%9F%91%8B%20Hola%20Iv%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" class="footer-contact-link" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp footer-icon" aria-hidden="true"></i>
+        +57 319 768 6417
+      </a>
+      <a href="mailto:isquiroga@utp.edu.co?subject=Contacto%20desde%20tu%20portafolio&body=Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional" class="footer-contact-link">
+        <i class="fa-solid fa-envelope footer-icon" aria-hidden="true"></i>
+        isquiroga@utp.edu.co
+      </a>
+    </div>
+    <div class="footer-copyright">© 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="{{ '/js/script.js' | relative_url }}" defer></script>
+</body>
+</html>

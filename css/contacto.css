@@ -16,13 +16,23 @@ main {
 
 #contacto {
     background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 40%, #fb7185 100%);
-    padding-top: 100px;
+    padding: 1.5rem 0 3rem;
     min-height: 100vh;
+}
+
+.page-main {
+    padding-top: 80px;
+    margin: 0;
+}
+
+#contacto .section-title {
+    margin-top: 1rem;
 }
 
 .contact-content {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .contact-intro {

@@ -1,38 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habilidades Y Credenciales | Iván Santiago Quiroga</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/credenciales.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-</head>
-
-<body>
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <div class="logo"><a href="index.html">ISQ</a></div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="credenciales.html" class="active">Habilidades y Credenciales</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-    <!-- Habilidades Técnicas PRIMERO -->
+---
+layout: default
+title: "Habilidades y credenciales | Iván Santiago Quiroga"
+stylesheet: css/credenciales.css
+active_nav: credentials
+description: "Habilidades técnicas, formación y certificaciones de Iván Santiago Quiroga."
+---
+<main class="page-main">
+<!-- Habilidades Técnicas PRIMERO -->
     <section class="section" id="skills">
       <div class="container">
         <h2 class="section-title">Habilidades Técnicas</h2>
@@ -51,7 +25,7 @@
           <div class="skill-category">
             <h3>Herramientas & Frameworks</h3>
             <ul>
-              <li><i class="fas fa-robot" style="color: #00D4FF;"></i> n8n (Automatización)</li>
+              <li><i class="fas fa-robot skill-icon-cyan"></i> n8n (Automatización)</li>
               <li><i class="devicon-google-plain colored"></i> AppSheet</li>
               <li><i class="devicon-google-plain colored"></i> Google Workspace</li>
               <li><i class="devicon-git-plain colored"></i> Git / <i class="devicon-github-original"></i> GitHub</li>
@@ -63,18 +37,18 @@
             <ul>
               <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
               <li><i class="devicon-google-plain colored"></i> Google Sheets</li>
-              <li><i class="fas fa-file-excel" style="color: #217346;"></i> Excel Avanzado</li>
-              <li><i class="fas fa-database" style="color: #0FAAFF;"></i> SAP</li>
+              <li><i class="fas fa-file-excel skill-icon-green"></i> Excel Avanzado</li>
+              <li><i class="fas fa-database skill-icon-blue"></i> SAP</li>
             </ul>
           </div>
           
           <div class="skill-category">
             <h3>Áreas de Expertise</h3>
             <ul>
-              <li><i class="fas fa-cogs" style="color: #FFD43B;"></i> Automatización de Procesos</li>
-              <li><i class="fas fa-brain" style="color: #FF6B6B;"></i> IA Aplicada</li>
-              <li><i class="fas fa-chart-line" style="color: #4ECDC4;"></i> Análisis de Datos</li>
-              <li><i class="fas fa-boxes" style="color: #95E1D3;"></i> Gestión de Inventarios</li>
+              <li><i class="fas fa-cogs skill-icon-yellow"></i> Automatización de Procesos</li>
+              <li><i class="fas fa-brain skill-icon-coral"></i> IA Aplicada</li>
+              <li><i class="fas fa-chart-line skill-icon-teal"></i> Análisis de Datos</li>
+              <li><i class="fas fa-boxes skill-icon-mint"></i> Gestión de Inventarios</li>
             </ul>
           </div>
           
@@ -138,27 +112,3 @@
       <img id="diplomaImage" src="" alt="Diploma">
     </div>
   </div>
-
-  <footer class="footer">
-    <div class="footer-contact">
-      <!-- WhatsApp con emojis -->
-      <a href="https://wa.me/573197686417?text=%F0%9F%91%8B%20Hola%20Iv%C3%A1n,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional%20%F0%9F%92%BC" class="footer-contact-link" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp footer-icon"></i>
-        +57 319 768 6417
-      </a>
-      
-      <!-- Gmail con emojis -->
-      <a href="mailto:isquiroga@utp.edu.co?subject=Contacto%20desde%20tu%20portafolio&body=Hola,%20vi%20tu%20portafolio%20y%20me%20interesa%20conversar%20sobre%20una%20oportunidad%20de%20colaboraci%C3%B3n%20profesional" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
-        <i class="fa-solid fa-envelope footer-icon"></i>
-        isquiroga@utp.edu.co
-      </a>
-    </div>
-    <div class="footer-copyright">
-      © 2026 Iván Santiago Quiroga Bonilla. Todos los derechos reservados.
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-
-</body>
-</html>
